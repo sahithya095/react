@@ -1,12 +1,17 @@
-import React from 'react';
-import './app.css';
-
-const Welcome=()=><h1 className='message'>Hello Sai</h1>
-function App(){
-  return (
-    <div className='App'>
-      <Welcome/>
+import React from "react";
+const FruitList=()=>{
+  const fruits=['apple','cherry','banana'];
+  return(
+    <div>
+      <h1>fruit list</h1>
+      <ul>
+        {fruits.map((fruit,index)=>(
+          <li key={index}>{fruit}</li>
+        ))
+        }
+      </ul>
     </div>
   )
 }
-export default App;
+
+export default FruitList;

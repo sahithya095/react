@@ -1,0 +1,51 @@
+
+DAte:4/2/2025
+React js :
+--create a element by using js:
+<h1>sai</h1>
+Let a=document.createElement('h1');
+a.innerHtml="I am ravi"
+Document.body.appendChild(a)
+Console.log(a)
+
+To create a element by react js:
+--react.createElment('h1')
+
+Syntax:
+React.createElement(type,prop)
+--type = tag name(div,h1,p)
+Props = className,id,onClick
+
+--to display the element
+--reactDOM.createRoot()
+--reactDOM.render() --to display the element
+
+
+INTRO TO JSX:
+javascript xml is a syntax extension for js in react.js;
+It allows us to write html code in react 
+-it makes us easier to write html in react
+JSX : JSX code gets compiled into JS
+Babel : a tool converts translates into JS 
+With JSX:
+<div id ="app"></div>
+    <script type ="text/babel">
+        const element = <h1 className ="a"> Hello JSX! </h1>
+        const root = ReactDOM.createRoot(document.getElementById('app'));
+        root.render(element);
+    </script>
+Expressions in JSX:
+With jsx you can write the expressions inside the { }
+This allows us to embed javascript expressions directly ;
+Date:5-2-2025
+Date:6-2-2025
+Create react app
+npx node package excecutor
+npx create-react-app- name //
+cd name //change directory name
+project folder:
+    public/index.html:The m
+
+
+    SCR/INDEX.JS:THE Javascript entry point for the react app where the DOM is rendered.
+    scr/App.js:the main component that serves 
