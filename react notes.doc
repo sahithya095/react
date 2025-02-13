@@ -43,9 +43,8 @@ Create react app
 npx node package excecutor
 npx create-react-app- name //
 cd name //change directory name
-project folder:
-    public/index.html:The m
+ Date:13/02/2025
+ use content():
+ props(properties) in react are used to pass data from parent component to chilld component
 
-
-    SCR/INDEX.JS:THE Javascript entry point for the react app where the DOM is rendered.
-    scr/App.js:the main component that serves 
+ prop drilling is the process data from parent component to deeply nested component through intermediate components by passing data as props at each level
