@@ -47,4 +47,8 @@ cd name //change directory name
  use content():
  props(properties) in react are used to pass data from parent component to chilld component
 
- prop drilling is the process data from parent component to deeply nested component through intermediate components by passing data as props at each level
+ prop drilling is the process data from parent component to deeply nested component through
+  intermediate components by passing data as props at each level
+
+Date: 14-02-2025
+React reducer:A reducer is a function that helps to update(like score) based on action we take
