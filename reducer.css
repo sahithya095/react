@@ -1,0 +1,21 @@
+
+.App{
+    text-align: center;
+    background-color: rgb(211, 225, 227);
+    padding: 10px 20px;
+  
+  }
+  .button{
+    border-radius: 80%;
+    background-color: rgb(171, 55, 171);
+    margin: 10px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    
+  }
+  .a{
+    text-align: center;
+    text-decoration:double;
+    color: black;
+  }
