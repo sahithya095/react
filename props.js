@@ -1,8 +1,13 @@
+import React,{createContext,useContext} from "react";
+const DataContext=createContext()
 function Props() {
+    
     const data = "Hello I am D.Sahithya";
     return (
       <div>
-        <User1 data={data} />
+    <DataContext.Provider value={data}>
+      <User1/>
+    </DataContext.Provider>
       </div>
     );
   }
@@ -24,7 +29,9 @@ function Props() {
   
   // User4 component
   function User4({ data }) {
-    return <div>{data}</div>;
+    const data1=useContext(DataContext);
+
+    return <div>{data1}</div>;
   }
   
   export default Props;

@@ -1,5 +1,5 @@
 import React ,{useState}from "react";
-import "./use state.css";
+import "./use effect.js";
 const UseState = () => {
     const[message,setmessage]=useState("Hello World");
     const changeMessage=()=>{
