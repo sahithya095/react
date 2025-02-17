@@ -52,3 +52,84 @@ cd name //change directory name
 
 Date: 14-02-2025
 React reducer:A reducer is a function that helps to update(like score) based on action we take
+React render : a render is a function that helps to update (like score , a list) based on action we take.
+
+--1)Current state : the current state of the state.
+--2)Action : 
+
+Example : 
+Action : add or remove an item
+State : intial value (3 items) #3-apples
+
+--Tracking apples  : 
+
+
+import React ,{useReducer}from 'react';
+//reducer function to track the number of the apples
+function appleReducer(state=3,action){
+  switch(action.type){
+    case 'ADD_APPLE':
+      return state + 1;
+    case 'REMOVE_APPLE':
+      return state - 1;
+ default:
+      return state;
+  }
+}
+function App(){
+  const [apple,dispatch]=useReducer(appleReducer,3);
+  return(
+    <div className='a'>
+      <h1>Apple Counter</h1>
+      <p>Number of Apples: {apple}</p>
+      <button onClick={()=>dispatch({type:'ADD_APPLE'})}>Add Apple</button>
+      <button onClick={()=>dispatch({type:'REMOVE_APPLE'})}>Remove Apple</button>
+    </div>
+  );
+}
+export default App;
+
+
+Callback in react : 
+
+--in react , a call back is function that is passed as an argument to another function
+--call backs are often to communicate with different components.
+
+Ex : a parent component passing as callback to a child
+
+--parent component displays a message ; and child component has a button.
+When the button is clicked , the child will use callback and tells the parent component to update the message.
+
+useRef:
+•	useState: changes the state, React will render the component and update the UI with the new element.
+•	useRef: changing the value by using useRef does not re-render; stays the same even when the value is updated.
+•	useRef: when you change the value stored in ref.current, it does not make the componentrender. This is useful when you need to store values or interact with DOM elements without extra re-renders.
+•	Commonly used: 
+o	Accessing a DOM element: like scrolling to screen 
+o	Focusing the input
+o	Storing values: It will keep track of values that don’t need to update the UI but need to remember the previous state.
+
+
+Date:17-02-2025
+How to use event changers:
+import React, {useState, useEffect, useRef} from 'react';
+
+function CounterWithPrev(){
+    const [count, setCount] = useState(0);
+    const prevCount = useRef();
+    //create a ref to store the previous value
+
+    useEffect(()=>{
+        prevCount.current = count;
+    }, [count])
+
+    return(
+        <div>
+            <p>Current Counter: {count}</p>
+            <p>prevCount: {prevCount.current}</p>
+
+            <button onClick={()=>setCount(count+1)}>Increment</button>
+        </div>
+    )
+}
+export default CounterWithPrev;
